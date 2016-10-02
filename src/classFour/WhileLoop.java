@@ -9,6 +9,14 @@ public class WhileLoop {
 			System.out.println("i value is: " + i);
 			i++;
 		}
+		//
+		int j = 0;
+		for( ; j < 20; j++){
+			if(j != 10)
+				System.out.println("j eqauls to "+ j);
+		}
+		
+		
 		
 	}
 
