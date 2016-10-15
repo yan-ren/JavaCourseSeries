@@ -1,4 +1,4 @@
-package classTwo;
+package unit1;
 
 import java.util.Scanner;
 

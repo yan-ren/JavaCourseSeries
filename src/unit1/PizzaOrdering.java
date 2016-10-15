@@ -1,4 +1,4 @@
-package classThree;
+package unit1;
 import java.util.Scanner;
 
 public class PizzaOrdering
