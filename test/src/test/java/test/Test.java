@@ -10,7 +10,7 @@ public class Test {
 		};
 		System.out.println(Arrays.toString(list));
 		Sorting s = new Sorting();
-		s.mergeSort(list, 0, list.length-1);
+		s.quickSort2(list, 0, list.length-1);
 		System.out.println(Arrays.toString(list));
 	}
 
