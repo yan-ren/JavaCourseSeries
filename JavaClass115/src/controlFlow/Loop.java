@@ -40,17 +40,27 @@ public class Loop {
 		// System.out.println(i);
 		// i++;
 		// }
-
+		/*
+		 * Scanner sc = new Scanner(System.in); int n = sc.nextInt(); String ans
+		 * = ""; if (n % 2 == 1) { ans = "Weird"; } else { if (n >= 2 && n <= 5)
+		 * { ans = "Not weird"; } } System.out.println(ans);
+		 */
+		/*
+		 * user input a number, then print all the odd number that is lower than
+		 * the user input
+		 */
 		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		String ans = "";
-		if (n % 2 == 1) {
-			ans = "Weird";
-		} else {
-			if (n >= 2 && n <= 5) {
-				ans = "Not weird";
-			}
+		System.out.println("Please enter a number");
+		int limit = sc.nextInt();
+		for (int i = 1; i <= limit; i = i + 2) {
+			System.out.print(i + " ");
 		}
-		System.out.println(ans);
 	}
 }
+
+
+
+
+
+
+
