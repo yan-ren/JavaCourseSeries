@@ -3,8 +3,7 @@ package test;
 public class Sorting {
 
 	/*
-	 * HeapSort
-	 * worst-case O(n log n), best-case O(n log n), average O(n log n)
+	 * HeapSort worst-case O(n log n), best-case O(n log n), average O(n log n)
 	 */
 	public void heapsort(int arr[]) {
 		int n = arr.length;
@@ -25,9 +24,10 @@ public class Sorting {
 		}
 	}
 
-	// To heapify a subtree rooted with node i which is
-	// an index in arr[]. n is size of heap
-	void heapify(int arr[], int n, int i) {
+	/* To heapify a subtree rooted with node i which is an index in arr[]. n is
+	 * size of heap
+	 */
+	private void heapify(int arr[], int n, int i) {
 		int largest = i; // Initialize largest as root
 		int l = 2 * i + 1; // left = 2*i + 1
 		int r = 2 * i + 2; // right = 2*i + 2
@@ -74,8 +74,7 @@ public class Sorting {
 
 			// If we have found a values in the left list which is larger then
 			// the pivot element and if we have found a value in the right list
-			// which is smaller then the pivot element then we exchange the
-			// values.
+			// which is smaller then the pivot element then we exchange the values.
 			// As we are done we can increase i and j
 			if (i <= j) {
 				exchange(numbers, i, j);
