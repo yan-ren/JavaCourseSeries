@@ -1,4 +1,4 @@
-package test;
+package sorting;
 
 public class Sorting {
 
@@ -128,7 +128,7 @@ public class Sorting {
 	 * The main function that implements QuickSort() arr[] --> Array to be
 	 * sorted, low --> Starting index, high --> Ending index
 	 */
-	void quickSort2(int arr[], int low, int high) {
+	public void quickSort2(int arr[], int low, int high) {
 		if (low < high) {
 			/*
 			 * pi is partitioning index, arr[pi] is now at right place

@@ -1,4 +1,4 @@
-package test;
+package linkedList;
 
 class Node {
 	public int data;
