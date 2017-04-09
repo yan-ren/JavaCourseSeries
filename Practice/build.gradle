@@ -11,11 +11,11 @@
 apply plugin: 'java'
 
 repositories {
-//    jcenter()
-//    maven { url "http://repo.maven.apache.org/maven2" }
+    jcenter()
+    maven { url "http://repo.maven.apache.org/maven2" }
     maven{ url 'https://artifactory.falcon.kronos.com/artifactory/ext-release-local' }
-       maven{ url 'https://artifactory.falcon.kronos.com/artifactory/gap-cache/' }
-       maven{ url 'https://artifactory.falcon.kronos.com/artifactory/falconcloud-suiteqa-snapshot' }
+   	maven{ url 'https://artifactory.falcon.kronos.com/artifactory/gap-cache/' }
+    maven{ url 'https://artifactory.falcon.kronos.com/artifactory/falconcloud-suiteqa-snapshot' }
 }
 
 dependencies {
@@ -25,7 +25,7 @@ dependencies {
              exclude module: 'selenium-java'
        }
        compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.53.+'
-       
+       testCompile 'org.testng:testng:6.10'
     compile group: 'org.testng', name: 'testng', version:'6.8.8'
     compile group: 'org.uncommons', name: 'reportng', version:'1.1.4'
     compile group: 'com.sun.jersey', name: 'jersey-client', version:'1.18.2'
