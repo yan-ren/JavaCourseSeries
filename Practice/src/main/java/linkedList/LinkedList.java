@@ -1,19 +1,9 @@
 package linkedList;
 
-class Node {
-	public int data;
-	public Node next;
-
-	public Node(int data) {
-		this.data = data;
-		this.next = null;
-	}
-}
-
 public class LinkedList {
 	public Node head;
 	private int size;
-	
+
 	public LinkedList() {
 		head = null;
 	}
@@ -22,38 +12,44 @@ public class LinkedList {
 		Node n = new Node(data);
 		n.next = head;
 		head = n;
+		size++;
 	}
-	
+
 	public void addAtEnd(int data)
 	// post: appends the specified element to the end of this list.
 	{
 		Node temp = new Node(data);
 		Node current = head;
-		// starting at the head node, crawl to the end of the list
-		while(current.next != null)
-		{
-			current = current.next;
+		if (head == null) {
+			head = temp;
+		} else {
+			// starting at the head node, crawl to the end of the list
+			while (current.next != null) {
+				current = current.next;
+			}
+			// the last node's "next" reference set to our new node
+			current.next = temp;
 		}
-		// the last node's "next" reference set to our new node
-		current.next = temp;
+		size++;
 	}
-	
+
 	public boolean remove(int index)
 	// post: removes the element at the specified position in this list.
-	/* another: give a pointer to the middle node of the linked list, delete that node
-	 * solution: copy the value from the next to the current and remove the next
+	/*
+	 * another: give a pointer to the middle node of the linked list, delete
+	 * that node solution: copy the value from the next to the current and
+	 * remove the next
 	 */
 	{
 		// if the index is out of range, exit
-		if(index < 1 || index > this.size)
+		if (index < 1 || index > this.size)
 			return false;
-		
+
 		Node current = head;
-		for(int i = 1; i < index; i++)
-		{
-			if(current.next == null)
+		for (int i = 1; i < index; i++) {
+			if (current.next == null)
 				return false;
-			
+
 			current = current.next;
 		}
 		current.next = current.next.next;
@@ -92,5 +88,19 @@ public class LinkedList {
 		reverseRecursion(currentNode.next);
 		currentNode.next.next = currentNode;
 		currentNode.next = null; // set "old" next pointer to NULL
+	}
+
+	public String toString() {
+		String result = "";
+		Node current = head;
+
+		for (int i = 0; i < size; i++) {
+			result = result + current.data + ", ";
+			if (current.next == null)
+				break;
+
+			current = current.next;
+		}
+		return result;
 	}
 }
