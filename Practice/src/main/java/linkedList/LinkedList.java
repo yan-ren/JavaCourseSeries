@@ -42,11 +42,11 @@ public class LinkedList {
 	 */
 	{
 		// if the index is out of range, exit
-		if (index < 1 || index > this.size)
+		if (index < 0 || index > this.size-1)
 			return false;
 
 		Node current = head;
-		for (int i = 1; i < index; i++) {
+		for (int i = 0; i < index; i++) {
 			if (current.next == null)
 				return false;
 
