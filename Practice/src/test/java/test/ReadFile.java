@@ -17,10 +17,11 @@ public class ReadFile {
 		new ReadFile().convert_file_to_string_java_bufferedreader();
 
 	}
-
+	
+	//c:
 	public void ReadWithBufferedReader() throws IOException {
-		String expected_value = "Hello world";
 		String file = "src/test/resources/test_read.txt";
+		
 		BufferedReader reader = new BufferedReader(new FileReader(file));
 		String currentLine = reader.readLine();
 		reader.close();
@@ -38,9 +39,7 @@ public class ReadFile {
 			fileContents.append(line);
 			line = br.readLine();
 		}
-
 		br.close();
-
 	}
 
 	public void ReadWithBufferedReader2() {
@@ -67,10 +66,10 @@ public class ReadFile {
 	// read by scanner
 	public void ReadWithScanner() {
 		try {
-			String filePath = "C:\\Users\\Administrator\\Desktop\\pic.jpg";
+			String filePath = "C:\\Users\\Administrator\\Desktop\\";
 			File file = new File(filePath);
 			Scanner scanner = new Scanner(file);
-			scanner.useDelimiter(" ");
+//			scanner.useDelimiter(" ");
 			while (scanner.hasNext()) {
 				System.out.println(scanner.nextLine());
 			}
@@ -102,5 +101,4 @@ public class ReadFile {
 		String line = reader.readLine();
 		// assertEquals(expected_value, line);
 	}
-
 }
